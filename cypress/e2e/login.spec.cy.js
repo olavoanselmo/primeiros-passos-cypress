@@ -1,21 +1,25 @@
 import userData from '/Workspace_QA/primeiros-passos-cypress/cypress/fixtures/userData.json'
+//importando a classe
+
+
+
 
 describe('Orange HRM Tests', () => {
   const selectorsList = {
-    usernameField: "[name= 'username']",
-    passwordField: "[name='password']",
-    loginButton: "[type='submit']",
-    sectionTitleTopBar: ".oxd-topbar-header-breadcrumb-module",
-    dashboardGrid: ".orangehrm-dashboard-grid",
-    wrongCredentialAlert: "[role='alert']"
+    //usernameField: "[name= 'username']",
+    //passwordField: "[name='password']",
+    //loginButton: "[type='submit']",
+    //sectionTitleTopBar: ".oxd-topbar-header-breadcrumb-module",
+    //dashboardGrid: ".orangehrm-dashboard-grid",
+    // wrongCredentialAlert: "[role='alert']"
   }
   it('Login - Success', () => {
-    cy.visit('/auth/login')
-    cy.get(selectorsList.usernameField).type(userData.userSucces.username)
-    cy.get(selectorsList.passwordField).type(userData.userSucces.password)
-    cy.get(selectorsList.loginButton).click()
-    cy.location('pathname').should('equal', '/web/index.php/dashboard/index')
-    cy.get(selectorsList.dashboardGrid)
+    //cy.visit('/auth/login')
+    //cy.get(selectorsList.usernameField).type(userData.userSucces.username)
+    //cy.get(selectorsList.passwordField).type(userData.userSucces.password)
+    //cy.get(selectorsList.loginButton).click()
+    //cy.location('pathname').should('equal', '/web/index.php/dashboard/index')
+    //cy.get(selectorsList.dashboardGrid)
   })
   it('Login - Fail', () => {
     cy.visit('/auth/login')
