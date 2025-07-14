@@ -3,17 +3,20 @@ class MenuPage {
     selectorsList() {
         const selectors = {
             myInfoButton: "[href='/web/index.php/pim/viewMyDetails']",
-            performanceButton:
+            performanceButton: "[href='/web/index.php/performance/viewPerformanceModule']"
         }
         //
         return selectors
     }
     //criar a função 
-    accessMyInfo () {
+    accessMyInfo() {
         cy.get(this.selectorsList().myInfoButton).click()
     }
     //criar função
+    accessorPerformance() {
+        cy.get(this.selectorsList().performanceButton).click()
+    }
 
 }
-//exportar a classe, ser vista fora da classe.
+//exportar a classe, para ser vista fora da classe.
 export default MenuPage
